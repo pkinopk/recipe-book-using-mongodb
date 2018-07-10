@@ -17,6 +17,6 @@
   <hr>
   <label for="Retrieve Recipe">Retrieve Recipe</label>
   <br>
-  <input type="number" class="form-control" placeholder="Recipe ID" [(ngModel)]="service.recipeID" style="margin: 1rem 1rem 0 0">
+  <input type="text" class="form-control" placeholder="Recipe ID" [(ngModel)]="service.recipeID" style="margin: 1rem 1rem 0 0">
   <button type="button" class="btn btn-primary" (click)="service.getRecipe(service.recipeID)">Retrieve Recipe</button>
 </div>
