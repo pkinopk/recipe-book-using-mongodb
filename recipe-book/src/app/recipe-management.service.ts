@@ -16,7 +16,7 @@ export class RecipeManagementService {
   selectedItem: Recipe = null;
   showEditComponent = false;
   recipeID;
-  recipes: Array<Recipe> = [];
+  recipes: Array<any> = [];
   fridge = new Fridge([
     new Ingredient('large onion', 1),
     new Ingredient('large carrots', 2),
@@ -32,9 +32,7 @@ export class RecipeManagementService {
   }
 
   delete(recipe) {
-    const index = this.recipes.indexOf(recipe);
-    // this.recipes.splice(index, 1);
-    this.deleteRecipe(index); // Delete recipe from server
+    this.deleteRecipe(recipe._id); // Delete recipe from server
     this.selectedItem = null;
     this.discard();
     this.checkIngredients = false;
@@ -166,7 +164,7 @@ export class RecipeManagementService {
   onStart() {
     this.getRecipesList()
       .then((response: any) => {
-        // console.log(response.body.recipes);
+        console.log(response.body.recipes);
         this.recipes = response.body;
         console.log(response);
         return response;

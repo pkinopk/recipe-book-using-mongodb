@@ -1,20 +1,17 @@
 {
-  "name": "recipe-book-server",
-  "version": "0.0.0",
-  "private": true,
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "Simple mongDB testing app",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./server.js",
-    "test:server": "nodemon --exec jasmine *.spec.js",
-    "test:class": "nodemon --exec jasmine ../recipe-book-using-server/recipe-book/src/app/recipe/recipe-displya/*.spec.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.3",
-    "cors": "^2.8.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "request": "^2.87.0"
-  }
+    "express": "*",
+    "body-parser": "*",
+    "mongoose": "*",
+    "cors": "*"
+  },
+  "author": "Paulo Kinopk",
+  "license": "ISC"
 }
